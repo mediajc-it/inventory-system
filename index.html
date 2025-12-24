@@ -221,6 +221,12 @@
             }, 800);
         });
 
+        // (ทำงานเมื่อ Browser โหลดหน้านี้ขึ้นมาแสดงอีกครั้ง)
+        window.addEventListener('pageshow', function(event) {
+            // สั่งปิด Swal ทุกกรณีเมื่อหน้านี้ถูกแสดงขึ้นมา
+            Swal.close(); 
+        });
+
         // เรียกใช้งานฟังก์ชันเมื่อโหลดหน้าเว็บ
         setButtonLink();
     </script>
